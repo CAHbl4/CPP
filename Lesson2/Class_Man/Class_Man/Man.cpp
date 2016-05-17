@@ -3,9 +3,17 @@
 
 Man::Man()
 {
-	strcpy_s(name, "No face");
-	strcpy_s(surname, "No name");
-	age = 0;
+	char str[20];
+	cout << "¬ведите им€: ";
+	cin >> str;
+	OemToAnsi(str, str);
+	strcpy_s(name, str);
+	cout << "¬ведите фамилию: ";
+	cin >> str;
+	OemToAnsi(str, str);
+	strcpy_s(surname, str);
+	cout << "¬ведите возраст: ";
+	cin >> age;
 }
 
 Man::Man(const char* str_name, const char* str_surname, int value)
