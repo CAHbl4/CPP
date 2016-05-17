@@ -1,11 +1,11 @@
-#include "stdafx.h"
+ï»¿#include "stdafx.h"
 #include "Point.h"
 
 Point::Point()
 {
-	cout << "Ââåäèòå êîîðäèíàòû òî÷êè: ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ð¾Ñ€Ð´Ð¸Ð½Ð°Ñ‚Ñ‹ Ñ‚Ð¾Ñ‡ÐºÐ¸: ";
 	cin >> x >> y;
-	cout << "Ââåäèòå èìÿ òî÷êè: ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¸Ð¼Ñ Ñ‚Ð¾Ñ‡ÐºÐ¸: ";
 	cin >> name;
 }
 

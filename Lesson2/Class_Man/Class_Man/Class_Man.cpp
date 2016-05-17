@@ -1,4 +1,4 @@
-// Class_Man.cpp : Defines the entry point for the console application.
+ï»¿// Class_Man.cpp : Defines the entry point for the console application.
 //
 
 #include "stdafx.h"
@@ -11,18 +11,18 @@ int main()
 
 	Man m1;
 	m1.Passport();
-	//cout << "Ðàçìåð îáúåêòà: " << sizeof(m1) << endl;
+	//cout << "Ð Ð°Ð·Ð¼ÐµÑ€ Ð¾Ð±ÑŠÐµÐºÑ‚Ð°: " << sizeof(m1) << endl;
 
-	Man m2("Âàñèëèé", "Ïóïêèí", 21);
+	Man m2("Ð’Ð°ÑÐ¸Ð»Ð¸Ð¹", "ÐŸÑƒÐ¿ÐºÐ¸Ð½", 21);
 	m2.Passport();
 	
 	cout << "-------------------------------------------------------------------------\n";
-	cout << "Ôàìèëèÿ 2-ãî ÷åëîâåêà: " << m2.GetSurName() << endl;
-	cout << "Âîçðàñò 1-ãî ÷åëîâåêà: " << m1.GetAge() << endl;
+	cout << "Ð¤Ð°Ð¼Ð¸Ð»Ð¸Ñ 2-Ð³Ð¾ Ñ‡ÐµÐ»Ð¾Ð²ÐµÐºÐ°: " << m2.GetSurName() << endl;
+	cout << "Ð’Ð¾Ð·Ñ€Ð°ÑÑ‚ 1-Ð³Ð¾ Ñ‡ÐµÐ»Ð¾Ð²ÐµÐºÐ°: " << m1.GetAge() << endl;
 
 	cout << "-------------------------------------------------------------------------\n";
-	m1.SetName("Èâàí");
-	m1.SetSurName("Èâàíîâ");
+	m1.SetName("Ð˜Ð²Ð°Ð½");
+	m1.SetSurName("Ð˜Ð²Ð°Ð½Ð¾Ð²");
 	m1.SetAge(18);
 	m1.Passport();
 

@@ -1,4 +1,4 @@
-// Credit_Class.cpp : Defines the entry point for the console application.
+Ôªø// Credit_Class.cpp : Defines the entry point for the console application.
 //
 
 #include "stdafx.h"
@@ -13,7 +13,7 @@ int main()
 	Credit man1;
 	man1.Info();
 
-	Credit man2("»‚‡ÌÓ‚");
+	Credit man2("–ò–≤–∞–Ω–æ–≤");
 	man2.Info();
 
 	system("pause");

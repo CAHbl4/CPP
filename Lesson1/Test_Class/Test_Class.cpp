@@ -1,4 +1,4 @@
-// Test_Class.cpp : Defines the entry point for the console application.
+﻿// Test_Class.cpp : Defines the entry point for the console application.
 //
 
 #include "stdafx.h"

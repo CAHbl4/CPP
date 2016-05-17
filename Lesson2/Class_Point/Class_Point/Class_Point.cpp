@@ -1,4 +1,4 @@
-// Class_Point.cpp : Defines the entry point for the console application.
+﻿// Class_Point.cpp : Defines the entry point for the console application.
 //
 
 #include "stdafx.h"

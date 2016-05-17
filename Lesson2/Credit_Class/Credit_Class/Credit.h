@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 class Credit
 {
 	int period;
@@ -11,9 +11,9 @@ public:
 	Credit(char *str) :maxSum(100000000)
 	{
 		strcpy_s(name, str);
-		cout << "Ââåäèòå ïåðèîä: ";
+		cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¿ÐµÑ€Ð¸Ð¾Ð´: ";
 		cin >> period;
-		cout << "Ââåäèòå ñòàâêó: ";
+		cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÑÑ‚Ð°Ð²ÐºÑƒ: ";
 		cin >> rate;
 	}
 	void Info();

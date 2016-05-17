@@ -1,19 +1,19 @@
-#pragma once
+п»ї#pragma once
 class Fraction
 {
-	//числитель
+	//С‡РёСЃР»РёС‚РµР»СЊ
 	int numerator;
 
-	//Знаменатель
+	//Р—РЅР°РјРµРЅР°С‚РµР»СЊ
 	int denominator;
 
-	//Наименьший общий знаменатель
+	//РќР°РёРјРµРЅСЊС€РёР№ РѕР±С‰РёР№ Р·РЅР°РјРµРЅР°С‚РµР»СЊ
 	static int LCD(int left, int right);
 
-	//Наибольший общий делитель
+	//РќР°РёР±РѕР»СЊС€РёР№ РѕР±С‰РёР№ РґРµР»РёС‚РµР»СЊ
 	static int GCD(int left, int right);
 
-	//Сократить дробь
+	//РЎРѕРєСЂР°С‚РёС‚СЊ РґСЂРѕР±СЊ
 	void Reduce();
 
 public:
@@ -22,19 +22,19 @@ public:
 		: numerator(numerator),
 		  denominator(denominator) {}
 
-	//Сложение
+	//РЎР»РѕР¶РµРЅРёРµ
 	void Add(Fraction f);
 	void Add(int numerator, int denominator);
 
-	//Вычитание
+	//Р’С‹С‡РёС‚Р°РЅРёРµ
 	void Sub(Fraction f);
 	void Sub(int numerator, int denominator);
 
-	//Умножение
+	//РЈРјРЅРѕР¶РµРЅРёРµ
 	void Mult(Fraction f);
 	void Mult(int numerator, int denominator);
 
-	//Деление
+	//Р”РµР»РµРЅРёРµ
 	void Div(Fraction f);
 	void Div(int numerator, int denominator);
 

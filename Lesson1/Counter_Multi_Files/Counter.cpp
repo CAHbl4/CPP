@@ -1,4 +1,4 @@
-#include "stdafx.h"
+﻿#include "stdafx.h"
 #include "Counter.h"
 
 Counter::Counter(int value)

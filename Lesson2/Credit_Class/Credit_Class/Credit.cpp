@@ -1,13 +1,13 @@
-#include "stdafx.h"
+ï»¿#include "stdafx.h"
 #include "Credit.h"
 
 
 void Credit::Info()
 {
-	cout << "Èìÿ: " << name << endl;
-	cout << "Ïåðèîä: " << period << endl;
-	cout << "Ñóììà êðåäèòà: " << maxSum << endl;
-	cout << "Åæåìåñÿ÷íûé ïëàòåæ: " << MonthlyPay() << endl;
+	cout << "Ð˜Ð¼Ñ: " << name << endl;
+	cout << "ÐŸÐµÑ€Ð¸Ð¾Ð´: " << period << endl;
+	cout << "Ð¡ÑƒÐ¼Ð¼Ð° ÐºÑ€ÐµÐ´Ð¸Ñ‚Ð°: " << maxSum << endl;
+	cout << "Ð•Ð¶ÐµÐ¼ÐµÑÑÑ‡Ð½Ñ‹Ð¹ Ð¿Ð»Ð°Ñ‚ÐµÐ¶: " << MonthlyPay() << endl;
 }
 
 int Credit::MonthlyPay()
@@ -17,11 +17,11 @@ int Credit::MonthlyPay()
 
 Credit::Credit()
 {
-	cout << "Ââåäèòå èìÿ: ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¸Ð¼Ñ: ";
 	cin >> name;
-	cout << "Ââåäèòå ïåðèîä: ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¿ÐµÑ€Ð¸Ð¾Ð´: ";
 	cin >> period;
-	cout << "Ââåäèòå ñòàâêó: ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÑÑ‚Ð°Ð²ÐºÑƒ: ";
 	cin >> rate;
 }
 

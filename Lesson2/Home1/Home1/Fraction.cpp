@@ -1,4 +1,4 @@
-#include "stdafx.h"
+ï»¿#include "stdafx.h"
 #include "Fraction.h"
 
 
@@ -27,7 +27,7 @@ void Fraction::Reduce() {
 
 Fraction::Fraction()
 {
-	cout << "Ââåäèòå ÷èñëèòåëü è çíàìåíàòåëü";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ‡Ð¸ÑÐ»Ð¸Ñ‚ÐµÐ»ÑŒ Ð¸ Ð·Ð½Ð°Ð¼ÐµÐ½Ð°Ñ‚ÐµÐ»ÑŒ";
 	cin >> numerator >> denominator;
 }
 

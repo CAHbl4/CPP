@@ -1,18 +1,18 @@
-#include "stdafx.h"
+ï»¿#include "stdafx.h"
 #include "Man.h"
 
 Man::Man()
 {
 	char str[20];
-	cout << "Ââåäèòå èìÿ: ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¸Ð¼Ñ: ";
 	cin >> str;
 	OemToAnsi(str, str);
 	strcpy_s(name, str);
-	cout << "Ââåäèòå ôàìèëèþ: ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ„Ð°Ð¼Ð¸Ð»Ð¸ÑŽ: ";
 	cin >> str;
 	OemToAnsi(str, str);
 	strcpy_s(surname, str);
-	cout << "Ââåäèòå âîçðàñò: ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð²Ð¾Ð·Ñ€Ð°ÑÑ‚: ";
 	cin >> age;
 }
 
@@ -55,9 +55,9 @@ void Man::SetAge(int value)
 
 void Man::Passport()
 {
-	cout << "Èìÿ:" << name << endl;
-	cout << "Ôàìèëèÿ:" << surname << endl;
-	cout << "Âîçðàñò:" << age << endl;
+	cout << "Ð˜Ð¼Ñ:" << name << endl;
+	cout << "Ð¤Ð°Ð¼Ð¸Ð»Ð¸Ñ:" << surname << endl;
+	cout << "Ð’Ð¾Ð·Ñ€Ð°ÑÑ‚:" << age << endl;
 	cout << "------------------------------\n";
 }
 
