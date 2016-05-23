@@ -11,7 +11,6 @@
 #include <tchar.h>
 #include <iostream>
 #include <windows.h>
-#include <vld.h>
 
 using namespace std;
 
