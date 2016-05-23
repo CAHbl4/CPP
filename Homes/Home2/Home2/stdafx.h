@@ -9,7 +9,11 @@
 
 #include <stdio.h>
 #include <tchar.h>
+#include <iostream>
+#include <windows.h>
+#include <vld.h>
 
+using namespace std;
 
 
 // TODO: reference additional headers your program requires here
