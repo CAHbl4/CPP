@@ -15,6 +15,19 @@ Building::Building(const Building& other) {
 }
 
 
+Building& Building::operator=(const Building& other) {
+	if (this == &other)
+		return *this;
+	if (flats)
+		delete[] flats;
+	count = other.count;
+	flats = new Flat[count];
+	for (int i = 0; i < count; ++i)
+		flats[i] = other.flats[i];
+	return *this;
+}
+
+
 void Building::AddFlat(int count) {
 	Flat* tmp = new Flat[this->count + count];
 	for (int i = 0; i < this->count; ++i) {

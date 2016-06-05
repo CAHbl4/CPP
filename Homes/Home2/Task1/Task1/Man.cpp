@@ -30,9 +30,11 @@ void Man::SetName(const char* name) {
 
 
 Man& Man::operator=(const Man& other) {
+	if (this == &other)
+		return *this;
 	if (name)
 		delete[] name;
-	length = strlen(other.name);
+	length = other.length;
 	name = new char[length + 1];
 	strcpy_s(name, length + 1, other.name);
 	return *this;

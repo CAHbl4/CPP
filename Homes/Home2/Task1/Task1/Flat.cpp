@@ -22,6 +22,8 @@ Flat::Flat(const Flat& other) {
 
 
 Flat& Flat::operator=(const Flat& other) {
+	if (this == &other)
+		return *this;
 	if (residents)
 		delete[] residents;
 	count = other.count;
