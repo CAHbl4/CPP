@@ -1,0 +1,20 @@
+Name: Pool1
+Type: Pool
+Width: 3
+Length: 4
+Max Depth: 2
+Name: Pool2
+Type: Pool
+Width: 4
+Length: 3
+Max Depth: 2
+Name: Lake1
+Type: Lake
+Width: 300
+Length: 700
+Max Depth: 6
+Name: Ocean1
+Type: Ocean
+Width: 10000
+Length: 20000
+Max Depth: 8000
