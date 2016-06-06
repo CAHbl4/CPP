@@ -41,6 +41,7 @@ public:
 	void SetWidth(float width);
 	void SetLength(float length);
 	void SetMaxDepth(float maxDepth);
+	void Compare(const Reservoir& other) const;
 
 
 	friend bool operator==(const Reservoir& lval, const Reservoir& rval) {

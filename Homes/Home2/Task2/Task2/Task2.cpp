@@ -10,6 +10,35 @@ void ShowMenu();
 int _tmain(int argc, _TCHAR* argv[]) {
 	ReservoirList list;
 	Reservoir tmp;
+	
+	tmp.SetName("Pool1");
+	tmp.SetType(Pool);
+	tmp.SetWidth(3);
+	tmp.SetLength(4);
+	tmp.SetMaxDepth(2);
+
+	list.Add(tmp);
+
+	tmp.SetName("Pool2");
+	tmp.SetType(Pool);
+	tmp.SetWidth(4);
+	tmp.SetLength(3);
+	tmp.SetMaxDepth(2);
+
+	list.Add(tmp);
+
+	tmp.SetName("Lake1");
+	tmp.SetType(Lake);
+	tmp.SetWidth(300);
+	tmp.SetLength(700);
+	tmp.SetMaxDepth(6);
+
+	list.Add(tmp);
+
+	list[0].Compare(list[1]);
+	list[0].Compare(list[2]);
+
+	system("pause");
 
 	char selector;
 	do {

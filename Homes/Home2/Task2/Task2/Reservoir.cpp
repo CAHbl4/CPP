@@ -120,6 +120,26 @@ void Reservoir::SetMaxDepth(float maxDepth) {
 }
 
 
+void Reservoir::Compare(const Reservoir& other) const {
+	if (*this == other) {
+		float area1, area2;
+		area1 = this->Area();
+		area2 = other.Area();
+
+		cout << "Area of " << this->name << ": " << area1 << endl;
+		cout << "Area of " << other.name << ": " << area2 << endl;
+		if (area1 > area2)
+			cout << this->name << " is bigger\n";
+		else if (area1 < area2)
+			cout << other.name << " is bigger\n";
+		else
+			cout << "Reservoirs are equal\n";
+	}
+	else
+		cout << "Reservoirs are not same type\n";
+}
+
+
 ostream& operator<<(ostream& os, const Reservoir& obj) {
 	os
 		<< "Name: " << obj.name << endl

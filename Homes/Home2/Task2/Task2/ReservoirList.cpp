@@ -41,8 +41,7 @@ void ReservoirList::Add(const Reservoir& reservoir) {
 
 
 Reservoir& ReservoirList::Get(int index) const {
-	if (index < 0 || index >= count)
-	{
+	if (index < 0 || index >= count) {
 		cout << "Index out of bound exception";
 		exit(EXIT_FAILURE);
 	}
@@ -51,8 +50,7 @@ Reservoir& ReservoirList::Get(int index) const {
 
 
 void ReservoirList::Set(int index, const Reservoir& value) const {
-	if (index < 0 || index >= count)
-	{
+	if (index < 0 || index >= count) {
 		cout << "Index out of bound exception";
 		exit(EXIT_FAILURE);
 	}
@@ -61,8 +59,7 @@ void ReservoirList::Set(int index, const Reservoir& value) const {
 
 
 void ReservoirList::Remove(int index) {
-	if (index < 0 || index >= count)
-	{
+	if (index < 0 || index >= count) {
 		cout << "Index out of bound exception";
 		exit(EXIT_FAILURE);
 	}
@@ -82,7 +79,7 @@ void ReservoirList::Clear() {
 	if (ptr)
 		delete[] ptr;
 	count = 0;
-	ptr = new Reservoir[count]; //Костыль http://stackoverflow.com/questions/704466/why-doesnt-delete-set-the-pointer-to-null
+	ptr = nullptr;
 }
 
 
@@ -92,17 +89,17 @@ int ReservoirList::GetCount() const {
 
 
 void ReservoirList::Show() const {
-	for (int i = 0; i < count; ++i) {
-		cout << ptr[i];
-		cout << "Volume: "<< ptr[i].Volume() << endl;
-		cout << "Area: " << ptr[i].Area() << endl;
-	}
+	for (int i = 0; i < count; ++i)
+		cout
+			<< ptr[i]
+			<< "Volume: " << ptr[i].Volume() << endl
+			<< "Area: " << ptr[i].Area() << endl
+			<< "---------------------------\n";	
 }
 
 
 Reservoir& ReservoirList::operator[](int index) const {
-	if (index < 0 || index >= count)
-	{
+	if (index < 0 || index >= count) {
 		cout << "Index out of bound exception";
 		exit(EXIT_FAILURE);
 	}
@@ -113,7 +110,7 @@ Reservoir& ReservoirList::operator[](int index) const {
 int ReservoirList::Export(const char* fileName) const {
 	ofstream fout(fileName, ios::out | ios::trunc);
 	int i = -1;
-	if (fout.is_open()){
+	if (fout.is_open()) {
 		for (i = 0; i < count; ++i)
 			fout << ptr[i];
 		fout.close();
@@ -125,9 +122,9 @@ int ReservoirList::Export(const char* fileName) const {
 int ReservoirList::Save(const char* fileName) const {
 	ofstream fout(fileName, ios::out | ios::binary | ios::trunc);
 	int i = -1;
-	if (fout.is_open()){
+	if (fout.is_open()) {
 		int len;
-		for (i = 0; i < count; ++i){
+		for (i = 0; i < count; ++i) {
 			//количество байт в имени
 			len = strlen(ptr[i].name);
 
@@ -158,7 +155,8 @@ int ReservoirList::Load(const char* fileName) {
 		size = fin.tellg();
 		fin.seekg(0, ios::beg);
 		Clear();
-		while (fin.tellg() < size){
+		i = 0;
+		while (fin.tellg() < size) {
 			Reservoir tmp;
 			char* str;
 			//Читаем длинну имени
