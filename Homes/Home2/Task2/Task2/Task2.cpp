@@ -38,6 +38,7 @@ int _tmain(int argc, _TCHAR* argv[]) {
 	list[0].Compare(list[1]);
 	list[0].Compare(list[2]);
 
+	//list.Remove(3);
 	system("pause");
 
 	char selector;

@@ -42,8 +42,7 @@ void ReservoirList::Add(const Reservoir& reservoir) {
 
 Reservoir& ReservoirList::Get(int index) const {
 	if (index < 0 || index >= count) {
-		cout << "Index out of bound exception";
-		exit(EXIT_FAILURE);
+		throw std::out_of_range("get");
 	}
 	return ptr[index];
 }
@@ -51,8 +50,7 @@ Reservoir& ReservoirList::Get(int index) const {
 
 void ReservoirList::Set(int index, const Reservoir& value) const {
 	if (index < 0 || index >= count) {
-		cout << "Index out of bound exception";
-		exit(EXIT_FAILURE);
+		throw std::out_of_range("set");
 	}
 	ptr[index] = value;
 }
@@ -60,8 +58,7 @@ void ReservoirList::Set(int index, const Reservoir& value) const {
 
 void ReservoirList::Remove(int index) {
 	if (index < 0 || index >= count) {
-		cout << "Index out of bound exception";
-		exit(EXIT_FAILURE);
+		throw std::out_of_range("remove");
 	}
 	Reservoir* tmp = new Reservoir[count - 1];
 	for (int i = 0, j = 0; i < count; ++i) {
@@ -100,8 +97,7 @@ void ReservoirList::Show() const {
 
 Reservoir& ReservoirList::operator[](int index) const {
 	if (index < 0 || index >= count) {
-		cout << "Index out of bound exception";
-		exit(EXIT_FAILURE);
+		throw std::out_of_range("[]");
 	}
 	return ptr[index];
 }
