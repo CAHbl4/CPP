@@ -9,9 +9,10 @@ int Fraction::LCD(int left, int right) {
 	return lcd;
 }
 
+
 int Fraction::GCD(int left, int right) {
 	int tmp;
-	while(right) {
+	while (right) {
 		tmp = right;
 		right = left % right;
 		left = tmp;
@@ -19,29 +20,35 @@ int Fraction::GCD(int left, int right) {
 	return left;
 }
 
+
 void Fraction::Reduce() {
-	int gcd = GCD(this->numerator, this->denominator);
-	this->numerator = this->numerator / gcd;
-	this->denominator = this->denominator / gcd;
+	int gcd = GCD(numerator, denominator);
+	numerator = numerator / gcd;
+	denominator = denominator / gcd;
+	if (denominator < 0) {
+		numerator = -numerator;
+		denominator = -denominator;
+	}
 }
 
-Fraction::Fraction()
-{
-	std::cout << "Введите числитель и знаменатель";
-	std::cin >> numerator >> denominator;
+
+Fraction::Fraction(int numerator, int denominator) : numerator(numerator), denominator(denominator) {
+	Reduce();
 }
 
-void Fraction::Add(Fraction f) {
-	int lcd = LCD(this->denominator, f.denominator);
-	this->numerator = this->numerator * lcd / this->denominator;
-	this->numerator += f.numerator * lcd / f.denominator;
-	this->denominator = lcd;
-	this->Reduce();
+
+void Fraction::Add(const Fraction& f) {
+	int lcd = LCD(denominator, f.denominator);
+	numerator = numerator * lcd / denominator;
+	numerator += f.numerator * lcd / f.denominator;
+	denominator = lcd;
+	Reduce();
 }
+
 
 void Fraction::Add(int numerator, int denominator) {
 	Fraction f(numerator, denominator);
-	this->Add(f);
+	Add(f);
 }
 
 
@@ -52,21 +59,20 @@ Fraction Fraction::operator+(const Fraction& rval) const {
 }
 
 
-
-
-
-void Fraction::Sub(Fraction f) {
-	int lcd = LCD(this->denominator, f.denominator);
-	this->numerator = this->numerator * lcd / this->denominator;
-	this->numerator -= f.numerator * lcd / f.denominator;
-	this->denominator = lcd;
-	this->Reduce();
+void Fraction::Sub(const Fraction& f) {
+	int lcd = LCD(denominator, f.denominator);
+	numerator = numerator * lcd / denominator;
+	numerator -= f.numerator * lcd / f.denominator;
+	denominator = lcd;
+	Reduce();
 }
+
 
 void Fraction::Sub(int numerator, int denominator) {
 	Fraction f(numerator, denominator);
-	this->Sub(f);
+	Sub(f);
 }
+
 
 Fraction Fraction::operator-(const Fraction& rval) const {
 	Fraction tmp(*this);
@@ -74,16 +80,19 @@ Fraction Fraction::operator-(const Fraction& rval) const {
 	return tmp;
 }
 
-void Fraction::Mult(Fraction f) {
-	this->numerator *= f.numerator;
-	this->denominator *= f.denominator;
-	this->Reduce();
+
+void Fraction::Mult(const Fraction& f) {
+	numerator *= f.numerator;
+	denominator *= f.denominator;
+	Reduce();
 }
+
 
 void Fraction::Mult(int numerator, int denominator) {
 	Fraction f(numerator, denominator);
-	this->Mult(f);
+	Mult(f);
 }
+
 
 Fraction Fraction::operator*(const Fraction& rval) const {
 	Fraction tmp(*this);
@@ -92,22 +101,25 @@ Fraction Fraction::operator*(const Fraction& rval) const {
 }
 
 
-void Fraction::Div(Fraction f) {
-	this->numerator *= f.denominator;
-	this->denominator *= f.numerator;
-	this->Reduce();
+void Fraction::Div(const Fraction& f) {
+	numerator *= f.denominator;
+	denominator *= f.numerator;
+	Reduce();
 }
+
 
 void Fraction::Div(int numerator, int denominator) {
 	Fraction f(numerator, denominator);
-	this->Div(f);
+	Div(f);
 }
+
 
 Fraction Fraction::operator/(const Fraction& rval) const {
 	Fraction tmp(*this);
 	tmp.Div(rval);
 	return tmp;
 }
+
 
 void Fraction::Show() const {
 	if (numerator) {
@@ -118,14 +130,50 @@ void Fraction::Show() const {
 			if (remainder)
 				std::cout << "+";
 		}
-		if (remainder)
-			std::cout << remainder << "/" << denominator;
+		if (remainder){
+			std::cout << integer ? std::cout << abs(remainder) : std::cout << remainder;
+			std::cout << "/" << denominator;
+		}
 	}
 	else
 		std::cout << numerator;
 	std::cout << std::endl;
 }
 
-Fraction::~Fraction()
-{
+
+Fraction::~Fraction() {}
+
+
+Fraction pow(const Fraction& base, double exponent) {
+	return Fraction(pow(base.numerator, exponent), pow(base.denominator, exponent));
+}
+
+
+Fraction abs(const Fraction& obj) {
+	return Fraction(abs(obj.numerator), abs(obj.denominator));
+}
+
+
+std::ostream& operator<<(std::ostream& os, const Fraction& obj) {
+	if (obj.numerator) {
+		int integer = obj.numerator / obj.denominator;
+		int remainder = obj.numerator % obj.denominator;
+		if (integer) {
+			os << integer;
+			if (remainder)
+				os << "+";
+		}
+		if (remainder){
+			integer ? os << abs(remainder) : os << remainder;
+			os << "/" << obj.denominator;
+		}
+	}
+	else
+		os << obj.numerator;
+	return os;
+}
+
+
+std::istream& operator>>(std::istream& is, Fraction& obj) {
+	return is >> obj.numerator >> obj.denominator;
 }
