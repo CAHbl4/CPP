@@ -11,7 +11,7 @@ void Date::ConvertFromX(int& days, int& month, int& year, int& hour, int &min, i
 		days = 70 * 365 + 17;
 	}
 	else {
-		secs = static_cast<unsigned int>(70 * 365 + 17) * 86400 + this->secs;
+		secs = 70 * 365 + 17 * 86400 + this->secs;
 		days = 0;
 	}
 	days += secs / 86400;
