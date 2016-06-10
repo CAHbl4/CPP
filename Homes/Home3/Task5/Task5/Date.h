@@ -1,19 +1,14 @@
 ﻿#pragma once
-#include <ostream>
+#include <iostream>
 
 class Date {
 	int secs;
-	void ConvertFromX(int& days, int& month, int& year, int& hour, int &min, int& sec) const;
+	int Y, M, D, h, m, s;
+	void ConvertFromX();
 public:
-	Date(int secs): secs(secs) {}
+	Date(int secs = 0) : secs(secs) { ConvertFromX(); }
 
 	Date(int day, int month, int year = 1970, int hour = 0, int min = 0, int sec = 0);
-	int GetYear() const;
-	int GetMonth() const;
-	int GetDay() const;
-	int GetHour() const;
-	int GetMin() const;
-	int GetSec() const;
 
 	void AddDay();
 
@@ -51,4 +46,8 @@ public:
 	}
 
 	friend std::ostream& operator<<(std::ostream& os, const Date& obj);
+
+	void ShowDate() const {
+		std::cout << *this << std::endl;
+	}
 };

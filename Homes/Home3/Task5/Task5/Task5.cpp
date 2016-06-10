@@ -4,23 +4,31 @@
 #include "stdafx.h"
 #include "Date.h"
 #include <iostream>
+#include <ctime>
+#include <vector>
+#include "Date2.h"
 
 using namespace std;
 
 int _tmain(int argc, _TCHAR* argv[])
 {
-	Date d1(1000000000);
-	cout << d1 << endl;
+	const int count = 1000000;
+	vector<Date> v(count);
+	int start = clock();
+	for (int i = 0; i < count; ++i) {
+		v[i] = 0x80000000 + i * 86400 * (rand() %31) ;
+	}
+	int end = clock();
+	cout << "it took " << end - start << "ticks, or " << ((float)end - start) / CLOCKS_PER_SEC << "seconds." << endl;
 
-	Date d2(31, 8, 2001, 1, 46, 40);
-	cout << d2 << endl;
+	vector<Date2> v2(count);
+	start = clock();
+	for (int i = 0; i < count; ++i) {
+		v2[i] = 0x80000000 + i * 86400 * (rand() % 31);
+	}
 
-	Date d3(-1);
-	cout << d3 << endl;
-
-	d3 += 86400;
-	cout << d3 << endl;
-
+	end = clock();
+	cout << "it took " << end - start << "ticks, or " << ((float)end - start) / CLOCKS_PER_SEC << "seconds." << endl;
 
 	system("pause");
 	return 0;
