@@ -64,7 +64,7 @@ public:
 			if (length > 1)
 			{
 				int index = length - 2;
-				while (ptr[index] < ptr[index + 1] && index != 0)
+				while (ptr[index] < ptr[index + 1] && index >= 0)
 				{
 					ptr[index + 1] = ptr[index];
 					ptr[index] = temp;
@@ -107,9 +107,9 @@ int _tmain(int argc, _TCHAR* argv[])
 {
 	PriorityQueue pr1(5);
 	pr1.Push(1, 0);
-	pr1.Push(1, 0);
+	pr1.Push(1, 1);
 	pr1.Push(10, 0);
-	pr1.Push(8, 0);
+	pr1.Push(8, 2);
 	pr1.Push(11, 0);
 	pr1.Show();
 	system("pause");
