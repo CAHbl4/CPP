@@ -31,8 +31,6 @@ int CheckString(char* str) {
 			if (stack.Pop() != '<')
 				return i;
 			break;
-		case ';':
-			
 		default:
 			break;
 		}
