@@ -29,25 +29,76 @@
             <elementDefinition Id="6403bd6a-1a1a-4c02-b49c-07159d75fde7" />
             <ownedParameters>
               <operationHasOwnedParameters>
-                <parameter Id="3f10a264-ad67-48ec-a1b4-6c679528960c" name="Job" direction="In" isUnique="false">
-                  <elementDefinition Id="f3beb935-202e-4924-ac66-8b1ded79b31a" />
+                <parameter Id="6099d8de-6bcc-48cc-8634-8b883daa3022" name="Priority" direction="In" isUnique="false">
+                  <elementDefinition Id="c1236940-14b2-4c54-b5c0-4b2474691821" />
                 </parameter>
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
-                <parameter Id="55ffbd2a-fc51-41b0-bb0b-c4d2d16b5093" name="Priority" direction="In" isUnique="false">
-                  <elementDefinition Id="41ed652f-1335-439e-aa31-af9924ab6512" />
+                <parameter Id="7f238030-1db7-4b72-b249-312bea23f37b" name="Job" direction="In" isUnique="false">
+                  <elementDefinition Id="e910c7d8-9383-4a56-99d3-0c74b3265ad5" />
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="e003ef27-cdb2-4541-aaa3-0c7ace54050e" direction="Return" isUnique="false">
+                  <elementDefinition Id="ae8f9647-8217-481f-b062-e4f01afe0314" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="2a240d7c-d447-4d73-8915-b2ab998837fb" LastKnownName="void" />
+                  </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
           <operation Id="fab001b5-50fe-470f-9a65-052e3b5ed93e" name="PrintAll" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="ab201090-8cfa-473f-a4fb-34ddf6d6bbc0" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="c00a34ee-dd67-4a84-9374-5c17ac1f61a2" direction="Return" isUnique="false">
+                  <elementDefinition Id="608a3468-7abb-4ed4-a8a6-b516125f6686" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="2a240d7c-d447-4d73-8915-b2ab998837fb" LastKnownName="void" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
           </operation>
           <operation Id="d8d2d672-57d5-49c0-864d-2ff261273909" name="PrintNext" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="7a2085f1-1aa3-44fb-b2f3-c56d29b691e9" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="ab85f40f-703f-4482-817d-fd31f8e8b33a" direction="Return" isUnique="false">
+                  <elementDefinition Id="5988437f-f45a-4559-b8bb-927943c46f66" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="2a240d7c-d447-4d73-8915-b2ab998837fb" LastKnownName="void" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
           </operation>
           <operation Id="517d37c4-d1cb-45c4-9b55-e08dda741d95" name="ShowLog" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="ac5c96e8-d784-4b65-89f1-2aabe32bb121" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="5e1012c9-5edb-4d21-9ab2-e8508f319532" direction="Return" isUnique="false">
+                  <elementDefinition Id="abe280ae-9d37-4b0d-8680-88c1534ab723" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="2a240d7c-d447-4d73-8915-b2ab998837fb" LastKnownName="void" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="e4744dfe-d8d6-4557-b8f6-683057ff7320" name="ShowQueue" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="4d9bee5a-e530-4846-a3bc-5becac61f388" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="dd95053c-5177-4698-bec0-99a68755b6ea" direction="Return" isUnique="false">
+                  <elementDefinition Id="b0eee7b9-573b-4c0c-9635-6a18a1444412" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="2a240d7c-d447-4d73-8915-b2ab998837fb" LastKnownName="void" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
           </operation>
         </ownedOperationsInternal>
       </class>
@@ -396,13 +447,13 @@
                 <parameter Id="49f1d2c6-e88d-4a21-8305-df2c99283da3" direction="Return" isUnique="false">
                   <elementDefinition Id="74265141-5e63-4aa9-8b96-296df65bc51c" />
                   <type_NamedElement>
-                    <referencedTypeMoniker Id="1da1c9e8-d8d6-4088-a76d-5e8c84a1a594" LastKnownName="ostream&amp;" />
+                    <referencedTypeMoniker Id="2a240d7c-d447-4d73-8915-b2ab998837fb" LastKnownName="void" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
-                <parameter Id="a2a1f0c7-94e1-4c73-9fb4-745b370fa336" name="Job" direction="In" isUnique="false">
-                  <elementDefinition Id="ab3b4f05-ace5-48ee-8721-4dd9947539f6" />
+                <parameter Id="af9a7555-6579-4655-9c85-64a80d679c79" name="Job" direction="In" isUnique="false">
+                  <elementDefinition Id="fcd63c05-8841-4f7e-a550-788fe1991823" />
                 </parameter>
               </operationHasOwnedParameters>
             </ownedParameters>
@@ -423,11 +474,6 @@
         </ownedOperationsInternal>
       </class>
     </logicalClassDesignerModelHasTypes>
-    <packageHasNamedElement>
-      <referencedType Id="1da1c9e8-d8d6-4088-a76d-5e8c84a1a594" name="ostream&amp;" isAbstract="false" isLeaf="false" cachedFullName="ostream&amp;">
-        <elementDefinition Id="9acb2194-fff6-406a-bbb8-8f45312b2eb2" />
-      </referencedType>
-    </packageHasNamedElement>
     <packageHasNamedElement>
       <referencedType Id="51d49938-0ed6-41a1-953e-fe611d66d92e" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
         <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />

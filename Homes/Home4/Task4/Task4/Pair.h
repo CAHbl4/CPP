@@ -1,4 +1,5 @@
 #pragma once
+#include <iostream>
 template <class T1, class T2>
 class Pair {
 	T1 first;

@@ -86,17 +86,30 @@
             <ownedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="f3beb935-202e-4924-ac66-8b1ded79b31a"
+                  Id="c1236940-14b2-4c54-b5c0-4b2474691821"
+                  name="Priority"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="e910c7d8-9383-4a56-99d3-0c74b3265ad5"
                   name="Job"
                   direction="In"
                   isUnique="false" />
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="41ed652f-1335-439e-aa31-af9924ab6512"
-                  name="Priority"
-                  direction="In"
-                  isUnique="false" />
+                  Id="ae8f9647-8217-481f-b062-e4f01afe0314"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="049f0966-7bfb-41b8-bf12-d4ce408faf51"
+                      LastKnownName="void"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
@@ -107,7 +120,23 @@
             isStatic="false"
             isAbstract="false"
             concurrency="Sequential"
-            isQuery="false" />
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="608a3468-7abb-4ed4-a8a6-b516125f6686"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="049f0966-7bfb-41b8-bf12-d4ce408faf51"
+                      LastKnownName="void"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
           <operation
             Id="7a2085f1-1aa3-44fb-b2f3-c56d29b691e9"
             name="PrintNext"
@@ -115,7 +144,23 @@
             isStatic="false"
             isAbstract="false"
             concurrency="Sequential"
-            isQuery="false" />
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="5988437f-f45a-4559-b8bb-927943c46f66"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="049f0966-7bfb-41b8-bf12-d4ce408faf51"
+                      LastKnownName="void"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
           <operation
             Id="ac5c96e8-d784-4b65-89f1-2aabe32bb121"
             name="ShowLog"
@@ -123,7 +168,47 @@
             isStatic="false"
             isAbstract="false"
             concurrency="Sequential"
-            isQuery="false" />
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="abe280ae-9d37-4b0d-8680-88c1534ab723"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="049f0966-7bfb-41b8-bf12-d4ce408faf51"
+                      LastKnownName="void"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="4d9bee5a-e530-4846-a3bc-5becac61f388"
+            name="ShowQueue"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="b0eee7b9-573b-4c0c-9635-6a18a1444412"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="049f0966-7bfb-41b8-bf12-d4ce408faf51"
+                      LastKnownName="void"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
         </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
@@ -761,15 +846,15 @@
                   isUnique="false">
                   <type_NamedElement>
                     <undefinedTypeMoniker
-                      Id="9acb2194-fff6-406a-bbb8-8f45312b2eb2"
-                      LastKnownName="ostream&amp;"
+                      Id="049f0966-7bfb-41b8-bf12-d4ce408faf51"
+                      LastKnownName="void"
                       LastKnownLocation="ModelingProject1.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="ab3b4f05-ace5-48ee-8721-4dd9947539f6"
+                  Id="fcd63c05-8841-4f7e-a550-788fe1991823"
                   name="Job"
                   direction="In"
                   isUnique="false" />
