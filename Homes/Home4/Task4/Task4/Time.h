@@ -20,12 +20,29 @@ public:
 		return tmp;
 	}
 
-	friend bool operator==(const Time& lval, const Time& rval) {
-		return lval.sec == rval.sec;
+
+	friend bool operator==(const Time& lhs, const Time& rhs) {
+		return lhs.sec == rhs.sec;
 	}
 
-	friend bool operator!=(const Time& lval, const Time& rval) {
-		return !(lval == rval);
+	friend bool operator!=(const Time& lhs, const Time& rhs) {
+		return !(lhs == rhs);
+	}
+
+	friend bool operator<(const Time& lhs, const Time& rhs) {
+		return lhs.sec < rhs.sec;
+	}
+
+	friend bool operator<=(const Time& lhs, const Time& rhs) {
+		return !(rhs < lhs);
+	}
+
+	friend bool operator>(const Time& lhs, const Time& rhs) {
+		return rhs < lhs;
+	}
+
+	friend bool operator>=(const Time& lhs, const Time& rhs) {
+		return !(lhs < rhs);
 	}
 
 	operator int() const {

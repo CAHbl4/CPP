@@ -34,60 +34,6 @@
               LastKnownLocation="ModelingProject1.uml" />
           </dependency>
         </suppliersInternal>
-        <targetEnds>
-          <association
-            Id="24d9c0b2-b610-494b-9af0-edc1152d600a"
-            isDerived="false"
-            sourceEndRoleName="Printer"
-            targetEndRoleName="Job"
-            isLeaf="false"
-            isAbstract="false">
-            <classMoniker
-              Id="620b9cdc-2ec9-4bcb-918b-17851a8ce650"
-              LastKnownName="Job"
-              LastKnownLocation="ModelingProject1.uml" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="f73393b1-6b83-491c-94c2-bb4e7ee03303"
-                  name="Printer"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="Composite"
-                  isComposite="false"
-                  isNavigableOwned="false" />
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="1006a884-d50d-4c53-96f8-c34fbe251446"
-                  name="Job"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="true">
-                  <lowerValueInternal>
-                    <literalString
-                      Id="f3b9a26c-e178-43ad-89c6-12d595f5a948"
-                      name="Lower"
-                      value="*" />
-                  </lowerValueInternal>
-                  <upperValueInternal>
-                    <literalString
-                      Id="063240d0-f064-4864-8f26-2c0a520df43c"
-                      name="Upper"
-                      value="*" />
-                  </upperValueInternal>
-                </memberEnd>
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
-        </targetEnds>
         <ownedAttributesInternal>
           <property
             Id="fc88f549-a50d-4d2d-a2b5-7590c0a93ed0"
@@ -200,41 +146,54 @@
         isActiveClass="false">
         <targetEnds>
           <association
-            Id="f6f5e0ad-60b1-4e80-aae1-770ebb106f4a"
+            Id="92e471ac-4a17-4ca7-8ee4-1aeccc1d3795"
             isDerived="false"
             sourceEndRoleName="Job"
-            targetEndRoleName="Client"
+            targetEndRoleName="Printer"
             isLeaf="false"
             isAbstract="false">
             <classMoniker
-              Id="dbffae7c-52e2-434b-b02b-7dd1d6f28d24"
-              LastKnownName="Client"
+              Id="4d8aebe9-6f70-4b3a-bb1f-b02e2b9bbf38"
+              LastKnownName="Printer"
               LastKnownLocation="ModelingProject1.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="9916e00d-603d-4dc1-8315-eedf7e35f1c1"
+                  Id="4e4332d9-d0f8-42d0-a1ce-5145932f9ed5"
                   name="Job"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
                   isDerived="false"
                   isDerivedUnion="false"
-                  aggregation="Shared"
+                  aggregation="Composite"
                   isComposite="false"
-                  isNavigableOwned="false" />
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="9ee0e3aa-22b1-4a35-bcf2-d68a0f7729c0"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="ab764edb-f19b-47cf-a4b0-c410a145f2ce"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="d8b30ef1-3792-442e-9d39-dba1485cf8e0"
-                  name="Client"
+                  Id="c6dd8bf7-17d2-4e57-a7d3-7e01c71db741"
+                  name="Printer"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
                   isDerived="false"
                   isDerivedUnion="false"
                   aggregation="None"
-                  isComposite="false" />
+                  isComposite="true" />
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
@@ -502,6 +461,47 @@
               LastKnownLocation="ModelingProject1.uml" />
           </dependency>
         </suppliersInternal>
+        <targetEnds>
+          <association
+            Id="f826b0d3-348f-4771-a2f0-ea8efd0be2b5"
+            isDerived="false"
+            sourceEndRoleName="Client"
+            targetEndRoleName="Job"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="620b9cdc-2ec9-4bcb-918b-17851a8ce650"
+              LastKnownName="Job"
+              LastKnownLocation="ModelingProject1.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="818416b2-fc6a-4a84-bcbc-72ef928c4afb"
+                  name="Client"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Shared"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c0c58cf2-3d4f-4b0a-8c8e-880c47b2146a"
+                  name="Job"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
         <ownedAttributesInternal>
           <property
             Id="4727a02d-26b2-42f2-a99b-3df1f4ebf03e"

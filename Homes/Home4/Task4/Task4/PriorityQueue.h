@@ -1,5 +1,4 @@
 #pragma once
-#include "stdafx.h"
 #include "Pair.h"
 #include "Priority.h"
 
@@ -40,7 +39,7 @@ public:
 			}
 		}
 		else
-			cout << "Queue is full!!!\n";
+			throw out_of_range("Queue is full");
 	}
 
 	Pair<Priority, T> Pop() {
@@ -51,15 +50,13 @@ public:
 			--length;
 			return temp;
 		}
-		throw
-			exit(1);
-	}
+		throw out_of_range("Queue is empty");
+}
 
 	void Show() const {
 		for (int i = 0; i < length; i++) {
 			ptr[i].ShowPair();
-			cout << "\t";
+			cout << endl;
 		}
-		cout << endl;
 	}
 };

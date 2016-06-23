@@ -1,5 +1,4 @@
-#include "stdafx.h"
-
+#pragma once
 template <class T1, class T2>
 class Pair {
 	T1 first;

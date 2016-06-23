@@ -11,7 +11,6 @@ public:
 		: name(name),
 		  defaultPriority(defaultPriority) {}
 
-
 	String GetName() const {
 		return name;
 	}
@@ -28,6 +27,31 @@ public:
 		this->defaultPriority = defaultPriority;
 	}
 
+	friend bool operator==(const Client& lhs, const Client& rhs) {
+		return lhs.name == rhs.name
+			&& lhs.defaultPriority == rhs.defaultPriority;
+	}
+
+	friend bool operator!=(const Client& lhs, const Client& rhs) {
+		return !(lhs == rhs);
+	}
+
+
+	friend bool operator<(const Client& lhs, const Client& rhs) {
+		return lhs.defaultPriority < rhs.defaultPriority;
+	}
+
+	friend bool operator<=(const Client& lhs, const Client& rhs) {
+		return !(rhs < lhs);
+	}
+
+	friend bool operator>(const Client& lhs, const Client& rhs) {
+		return rhs < lhs;
+	}
+
+	friend bool operator>=(const Client& lhs, const Client& rhs) {
+		return !(lhs < rhs);
+	}
 
 	friend std::ostream& operator<<(std::ostream& os, const Client& obj) {
 		return os << "name: " << obj.name;

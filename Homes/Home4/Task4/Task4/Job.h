@@ -37,6 +37,16 @@ public:
 		this->timeAdded = timeAdded;
 	}
 
+	friend bool operator==(const Job& lhs, const Job& rhs) {
+		return lhs.client == rhs.client
+			&& lhs.fileName == rhs.fileName
+			&& lhs.timeAdded == rhs.timeAdded;
+	}
+
+	friend bool operator!=(const Job& lhs, const Job& rhs) {
+		return !(lhs == rhs);
+	}
+
 	friend bool operator<(const Job& lhs, const Job& rhs) {
 		return lhs.timeAdded < rhs.timeAdded;
 	}

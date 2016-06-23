@@ -6,7 +6,7 @@ class Printer {
 	PriorityQueue<Job> queue;
 public:
 
-	Printer() : queue(PriorityQueue<Job>(50)) { }
+	Printer(int queueSize = 50) : queue(PriorityQueue<Job>(queueSize)) { }
 
 	void AddJob(Priority priority, Job job) {
 		queue.Push(priority, job);

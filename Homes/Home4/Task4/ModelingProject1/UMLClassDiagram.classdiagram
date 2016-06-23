@@ -10,34 +10,6 @@
             <elementDefinition Id="c5e5d08d-82a6-4a37-9a98-8ccb9262bc61" />
           </dependency>
         </suppliersInternal>
-        <targetEnds>
-          <association Id="94eb7128-b0c1-4147-94b6-998e81e2fb85" isDerived="false" sourceEndRoleName="Printer" targetEndRoleName="Job" isLeaf="false" isAbstract="false">
-            <classMoniker Id="bda34394-a0d3-4257-8d8b-cad635443c96" LastKnownName="Job" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd Id="43ba8414-a60f-4be6-8fdb-87982e5c75bf" name="Printer" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
-                  <elementDefinition Id="f73393b1-6b83-491c-94c2-bb4e7ee03303" />
-                </memberEnd>
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd Id="7c89a98a-3e71-45dd-9b7a-442a0b4dd63f" name="Job" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
-                  <lowerValueInternal>
-                    <literalString Id="c4c9fba8-00e1-4c90-a57a-771ea3c915ec" name="Lower" value="*">
-                      <elementDefinition Id="f3b9a26c-e178-43ad-89c6-12d595f5a948" />
-                    </literalString>
-                  </lowerValueInternal>
-                  <upperValueInternal>
-                    <literalString Id="1fad6e6c-041d-48e0-abb2-15f157c716ff" name="Upper" value="*">
-                      <elementDefinition Id="063240d0-f064-4864-8f26-2c0a520df43c" />
-                    </literalString>
-                  </upperValueInternal>
-                  <elementDefinition Id="1006a884-d50d-4c53-96f8-c34fbe251446" />
-                </memberEnd>
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-            <elementDefinition Id="24d9c0b2-b610-494b-9af0-edc1152d600a" />
-          </association>
-        </targetEnds>
         <ownedAttributesInternal>
           <property Id="b6583596-973a-4f84-b9c5-458fdcf883a3" name="log" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="fc88f549-a50d-4d2d-a2b5-7590c0a93ed0" />
@@ -94,21 +66,31 @@
       <class Id="bda34394-a0d3-4257-8d8b-cad635443c96" name="Job" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="620b9cdc-2ec9-4bcb-918b-17851a8ce650" />
         <targetEnds>
-          <association Id="ae9a9a6a-b288-462b-ba92-b4d4fadc41c6" isDerived="false" sourceEndRoleName="Job" targetEndRoleName="Client" isLeaf="false" isAbstract="false">
-            <classMoniker Id="b520638a-01df-48c5-8ba4-862722b3a9c1" LastKnownName="Client" />
+          <association Id="f077b8e6-d989-4017-9f35-46359fa5b8cc" isDerived="false" sourceEndRoleName="Job" targetEndRoleName="Printer" isLeaf="false" isAbstract="false">
+            <classMoniker Id="f355882a-7dc7-454f-bb2a-ce66c489557c" LastKnownName="Printer" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
-                <memberEnd Id="b3e10824-fd64-49de-bc2d-6527d8a517d9" name="Job" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Shared" isComposite="false" isNavigableOwned="false">
-                  <elementDefinition Id="9916e00d-603d-4dc1-8315-eedf7e35f1c1" />
+                <memberEnd Id="c4d00838-ade2-4ecd-9555-351d6baf27ba" name="Job" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString Id="83cee66a-811c-4efc-8408-a9b27c122259" name="Lower" value="*">
+                      <elementDefinition Id="9ee0e3aa-22b1-4a35-bcf2-d68a0f7729c0" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="a24b81e5-07cf-4f47-9582-32b3113e7a0f" name="Upper" value="*">
+                      <elementDefinition Id="ab764edb-f19b-47cf-a4b0-c410a145f2ce" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="4e4332d9-d0f8-42d0-a1ce-5145932f9ed5" />
                 </memberEnd>
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
-                <memberEnd Id="3dc5368a-dc17-4cb4-8369-d7eabc57ebd1" name="Client" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="d8b30ef1-3792-442e-9d39-dba1485cf8e0" />
+                <memberEnd Id="7a9a8d9f-f9d8-4122-80b6-8072a310e582" name="Printer" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
+                  <elementDefinition Id="c6dd8bf7-17d2-4e57-a7d3-7e01c71db741" />
                 </memberEnd>
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
-            <elementDefinition Id="f6f5e0ad-60b1-4e80-aae1-770ebb106f4a" />
+            <elementDefinition Id="92e471ac-4a17-4ca7-8ee4-1aeccc1d3795" />
           </association>
         </targetEnds>
         <ownedAttributesInternal>
@@ -258,6 +240,24 @@
             <elementDefinition Id="c8e6f5ce-8363-4734-9576-fdc0eb6ad6c3" />
           </dependency>
         </suppliersInternal>
+        <targetEnds>
+          <association Id="4c693acb-a930-469c-b2d7-2e58843a8cd0" isDerived="false" sourceEndRoleName="Client" targetEndRoleName="Job" isLeaf="false" isAbstract="false">
+            <classMoniker Id="bda34394-a0d3-4257-8d8b-cad635443c96" LastKnownName="Job" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f82ed551-0d3a-4e5d-b8ec-fc08a916455c" name="Client" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Shared" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="818416b2-fc6a-4a84-bcbc-72ef928c4afb" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="a965f2a7-fb1d-42dc-b974-ea080b993616" name="Job" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="c0c58cf2-3d4f-4b0a-8c8e-880c47b2146a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="f826b0d3-348f-4771-a2f0-ea8efd0be2b5" />
+          </association>
+        </targetEnds>
         <ownedAttributesInternal>
           <property Id="658262b9-6e0d-4863-8bc5-52c374c16d19" name="defaultPriority" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="4727a02d-26b2-42f2-a99b-3df1f4ebf03e" />
