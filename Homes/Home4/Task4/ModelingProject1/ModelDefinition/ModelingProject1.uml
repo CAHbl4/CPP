@@ -48,9 +48,9 @@
             aggregation="None"
             isComposite="false">
             <type_NamedElement>
-              <undefinedTypeMoniker
-                Id="73189fd1-070f-4ab2-a99f-8fadc1c14ad6"
-                LastKnownName="List&lt;Pair&lt;Job, Time&gt;&gt;"
+              <classMoniker
+                Id="28e2a84a-d87c-42a5-a1dc-a7081c07ec32"
+                LastKnownName="PrinterLog"
                 LastKnownLocation="ModelingProject1.uml" />
             </type_NamedElement>
           </property>
@@ -665,6 +665,158 @@
       <undefinedType
         Id="bf590241-b80d-4c2a-aac8-44ce5b1366e7"
         name="Time" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="28e2a84a-d87c-42a5-a1dc-a7081c07ec32"
+        name="PrinterLog"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="ccfdbb26-633d-4db3-bd1f-1d53a5c665c9">
+            <classMoniker
+              Id="620b9cdc-2ec9-4bcb-918b-17851a8ce650"
+              LastKnownName="Job"
+              LastKnownLocation="ModelingProject1.uml" />
+          </dependency>
+        </suppliersInternal>
+        <targetEnds>
+          <association
+            Id="4accc244-f0b5-4002-85ab-f498518ef634"
+            isDerived="false"
+            sourceEndRoleName="PrinterLog"
+            targetEndRoleName="Printer"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="4d8aebe9-6f70-4b3a-bb1f-b02e2b9bbf38"
+              LastKnownName="Printer"
+              LastKnownLocation="ModelingProject1.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="4fe549e3-e408-4fa3-ab6c-adb4ada061b0"
+                  name="PrinterLog"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Composite"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c4f5cd83-726d-405f-a539-068c7534ec06"
+                  name="Printer"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="true" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="c46841c2-8fc7-409a-a97b-50c5eb3eb0a0"
+            name="fileName"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="ModelingProject1.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="c492f6f6-8b62-400c-b317-609c50e495bd"
+            name="operator&lt;&lt;"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="74265141-5e63-4aa9-8b96-296df65bc51c"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="9acb2194-fff6-406a-bbb8-8f45312b2eb2"
+                      LastKnownName="ostream&amp;"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="ab3b4f05-ace5-48ee-8721-4dd9947539f6"
+                  name="Job"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="aa27b12c-c8e7-4ef6-9058-188a78a1c3d1"
+            name="Show"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="5335da54-1403-4e1b-be35-6fa92019b840"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="049f0966-7bfb-41b8-bf12-d4ce408faf51"
+                      LastKnownName="void"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="de3836c6-8a35-4e56-bd2b-827dd1433d97"
+        name="os" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="9acb2194-fff6-406a-bbb8-8f45312b2eb2"
+        name="ostream&amp;" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="853afd62-2915-4942-a25d-a302b40eb011"
+        name="PRinterLog" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType

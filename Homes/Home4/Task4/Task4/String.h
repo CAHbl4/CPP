@@ -27,6 +27,10 @@ public:
 		return length;
 	}
 
+	operator char*() const {
+		return str;
+	}
+
 	friend bool operator==(const String& lhs, const String& rhs) {
 		return !strcmp(lhs.str, rhs.str);
 	}

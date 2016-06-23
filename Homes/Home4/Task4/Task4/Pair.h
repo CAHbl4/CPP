@@ -12,7 +12,15 @@ public:
 	}
 
 	void ShowPair() {
-		cout << first << " : " << second;
+		std::cout << first << " : " << second;
+	}
+
+	T1 GetFirst() const {
+		return first;
+	}
+
+	T2 GetSecond() const {
+		return second;
 	}
 
 	friend bool operator<(const Pair& lhs, const Pair& rhs) {
