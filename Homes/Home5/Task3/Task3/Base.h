@@ -18,5 +18,24 @@ public:
 		AddRecord(record);
 	}
 
+	void Show() const {
+		records.GetData().Show();
+	}
+
+	void Show(int number) {
+		Record search(number);
+		if (records.Search(search))
+			std::cout << records.Get(Record(search));
+		else
+			std::cout << "Запись не найдена\n";
+	}
+
+	void ShowFromTo(int left, int right) const {
+		LinkedList<Record> data = records.GetData();
+		for (int i = 0; i <= data.GetUpperBound(); ++i) {
+			if (data[i].GetNumber() >= left &&data[i].GetNumber() <= right)
+				std::cout << data[i];
+		}
+	}
 };
 

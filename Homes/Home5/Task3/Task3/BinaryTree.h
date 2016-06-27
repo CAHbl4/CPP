@@ -123,7 +123,7 @@ public:
 		while (temp) {
 			//если элемент найден возвращаем true
 			if (data == temp->data)
-				return true;
+				return temp->data;
 			//если data< temp->data переходим в левое поддерево
 			if (data < temp->data) {
 				temp = temp->left;
@@ -136,7 +136,7 @@ public:
 		return temp->data;
 	}
 
-	LinkedList<T> GetData() {
+	LinkedList<T> GetData() const {
 		LinkedList<T> list;
 		NodeTree<T>* temp = root;
 		NodeTree<T>* right = root;
@@ -144,15 +144,18 @@ public:
 			right = right->right;
 		}
 
-		while (temp != right) {
-			while (temp->left)
+		while (temp->left)
+			temp = temp->left;
+		list.Add(temp->data);
+
+		while (right->data != list[list.GetUpperBound()]) {
+			while (temp->left && temp->left->data > list[list.GetUpperBound()])
 				temp = temp->left;
-			list.Add(temp->data);
-			temp = temp->root;
-			list.Add(temp->data);
-			if (temp->right)
+			if (temp->data > list[list.GetUpperBound()])
+				list.Add(temp->data);
+			if (temp->right && temp->right->data > list[list.GetUpperBound()])
 				temp = temp->right;
-			else{
+			else {
 				temp = temp->root;
 			}
 		}
@@ -164,7 +167,6 @@ public:
 		if (ptr) {
 			Clear(ptr->right);
 			Clear(ptr->left);
-			std::cout << "Delete data:" << ptr->data << std::endl;
 			delete ptr;
 		}
 		//память очищена, но root еще указывает на определенную ячейку, поэтому зануляем
@@ -217,13 +219,13 @@ public:
 					//определяем в какой ветви находится удаляемый
 					//узел относительно предка
 					if (prev->left == temp)
-						//подсоединяем ветвь с левой стороны
+					//подсоединяем ветвь с левой стороны
 					{
 						temp->left->root = prev;
 						prev->left = temp->left;
 					}
 					else
-						//подсоединяем ветвь с правой стороны
+					//подсоединяем ветвь с правой стороны
 					{
 						temp->left->root = prev;
 						prev->right = temp->left;
@@ -234,13 +236,13 @@ public:
 					//определяем в какой ветви находится удаляемый
 					//узел относительно предка
 					if (prev->left == temp)
-						//подсоединяем ветвь с левой стороны
+					//подсоединяем ветвь с левой стороны
 					{
 						temp->right->root = prev;
 						prev->left = temp->right;
 					}
 					else
-						//подсоединяем ветвь с правой стороны
+					//подсоединяем ветвь с правой стороны
 					{
 						temp->right->root = prev;
 						prev->right = temp->right;
@@ -292,12 +294,12 @@ public:
 				//определяем в какой ветви находится удаляемый
 				else {
 					if (prev->left == temp)
-						//подсоединяем правую (обновленную ветвь) к родителю
+					//подсоединяем правую (обновленную ветвь) к родителю
 					{
 						temp->right->root = prev;
 						prev->left = temp->right;
 					}
-					else{
+					else {
 						temp->right->root = prev;
 						prev->right = temp->right;
 					}

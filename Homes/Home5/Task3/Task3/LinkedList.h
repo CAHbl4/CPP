@@ -74,6 +74,12 @@ class LinkedList {
 public:
 	LinkedList() : size(0), count(0), grow(1), head(nullptr), tail(nullptr) {}
 
+	LinkedList(const LinkedList& other)
+		: size(0), count(0), grow(0), head(nullptr), tail(nullptr) {
+		SetSize(other.size, other.grow);
+		Append(other);
+	}
+
 	int GetSize() const {
 		return size;
 	}
@@ -95,7 +101,7 @@ public:
 	}
 
 	bool IsEmpty() const {
-		return count;
+		return count == 0;
 	}
 
 	void FreeExtra() {
@@ -180,18 +186,17 @@ public:
 	}
 
 	void Show() const {
-		std::cout << "Size: " << size << ", Grow: " << grow << std::endl;
+		//std::cout << "Size: " << size << ", Grow: " << grow << std::endl;
 		if (count) {
-			std::cout << "Data:\n";
+			//std::cout << "Data:\n";
 			Node<T>* tmp = head;
 			for (int i = 0; i < count; ++i) {
-				std::cout << tmp->data << "\t";
+				std::cout << tmp->data;
 				tmp = tmp->next;
 			}
 		}
 		else
 			std::cout << "Array is empty.";
-		std::cout << "\n--------------------------------\n";
 	}
 
 	~LinkedList() {

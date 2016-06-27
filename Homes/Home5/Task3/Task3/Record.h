@@ -6,7 +6,7 @@ class Record {
 	int number;
 	LinkedList<Penalty> list;
 public:
-	Record(int number)
+	Record(int number = 0)
 		: number(number), list(LinkedList<Penalty>()) {}
 
 	void AddPenalty(Date date, PenaltyTypes type, String comment, int value) {
@@ -25,7 +25,7 @@ public:
 		this->number = number;
 	}
 
-	LinkedList<Penalty> GetList() const {
+	LinkedList<Penalty>& GetList() {
 		return list;
 	}
 
@@ -58,12 +58,15 @@ public:
 	}
 
 	friend std::ostream& operator<<(std::ostream& os, const Record& obj) {
-		os << "Номер: " << obj.number << std::endl;
-		os << "Количество нарушений: " << obj.list.GetUpperBound() + 1 << std::endl;
-		os << "Список нарушений:\n";
+		os << "================================\n"
+		 <<"Номер: " << obj.number << std::endl
+		 << "Количество нарушений: " << obj.list.GetUpperBound() + 1 << std::endl
+		 << "Список нарушений:\n"
+		 << "--------------------------------\n";
 		for (int i = 0; i <= obj.list.GetUpperBound(); ++i) {
 			os << obj.list[i] << std::endl;
 		}
 		return os;
 	}
+
 };
