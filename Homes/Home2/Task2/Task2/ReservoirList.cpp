@@ -104,7 +104,7 @@ Reservoir& ReservoirList::operator[](int index) const {
 
 
 int ReservoirList::Export(const char* fileName) const {
-	ofstream fout(fileName, ios::out | ios::trunc);
+	ofstream fout(fileName, ios::trunc);
 	int i = -1;
 	if (fout.is_open()) {
 		for (i = 0; i < count; ++i)
@@ -116,7 +116,7 @@ int ReservoirList::Export(const char* fileName) const {
 
 
 int ReservoirList::Save(const char* fileName) const {
-	ofstream fout(fileName, ios::out | ios::binary | ios::trunc);
+	ofstream fout(fileName, ios::binary | ios::trunc);
 	int i = -1;
 	if (fout.is_open()) {
 		int len;
@@ -143,7 +143,7 @@ int ReservoirList::Save(const char* fileName) const {
 
 
 int ReservoirList::Load(const char* fileName) {
-	ifstream fin(fileName, ios::in | ios::binary | ios::ate);
+	ifstream fin(fileName, ios::binary | ios::ate);
 	streampos size;
 	int len;
 	int i = -1;

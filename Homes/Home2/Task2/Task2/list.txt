@@ -13,8 +13,3 @@ Type: Lake
 Width: 300
 Length: 700
 Max Depth: 6
-Name: Ocean1
-Type: Ocean
-Width: 10000
-Length: 20000
-Max Depth: 8000
