@@ -12,7 +12,7 @@ char* BoolToStr(bool b) {
 
 int _tmain(int argc, _TCHAR* argv[]) {
 
-	Camera cam1("Kodak 100", 4, Material::Plastic);
+	Camera cam1("Kodak 100", 40, Material::Plastic);
 	DigitalCamera cam2("Canon 5D", 3, Material::Metal, 8);
 	cam1.Info();
 	std::cout << "Expensive: " << BoolToStr(cam1.IsExpensive()) << std::endl << std::endl;
