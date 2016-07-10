@@ -24,16 +24,16 @@
     <ClInclude Include="targetver.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Man.h">
+    <ClInclude Include="Student.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Novice.h">
+    <ClInclude Include="Regular.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Skilled.h">
+    <ClInclude Include="Smart.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Veteran.h">
+    <ClInclude Include="Genius.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -41,7 +41,7 @@
     <ClCompile Include="stdafx.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Task3.cpp">
+    <ClCompile Include="Task4.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
