@@ -15,7 +15,8 @@ using namespace std;
 int _tmain(int argc, _TCHAR* argv[]) {
 	srand(time(0));
 
-	Student* students[10];
+	const int SIZE = 10;
+	Student* students[SIZE];
 
 	students[0] = new Regular("Ivan", "Ivanov", 11);
 	students[1] = new Regular("Konstantin", "Petrov", 20);
@@ -28,7 +29,7 @@ int _tmain(int argc, _TCHAR* argv[]) {
 	students[8] = new Smart("Vasili", "Chapaev", 20);
 	students[9] = new Smart("Vitaliy", "Alibabaev", 1);
 
-	for (int i = 0; i < 10; ++i) {
+	for (int i = 0; i < SIZE; ++i) {
 		cout << students[i]->GetName() << " "
 			<< students[i]->GetSurname()
 			<< " with " << students[i]->GetAttendance() << " attendace"
@@ -36,5 +37,9 @@ int _tmain(int argc, _TCHAR* argv[]) {
 	}
 
 	system("pause");
+
+	for (int i = 0; i < SIZE; ++i) {
+		delete students[i]; 
+	}
 	return 0;
 }

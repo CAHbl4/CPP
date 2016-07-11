@@ -13,6 +13,7 @@
 
 int _tmain(int argc, _TCHAR* argv[]) {
 	srand(time(0));
+	const int SIZE = 5;
 	Man* shooters[5];
 
 	shooters[0] = new Novice("Jon", 25, 5);
@@ -23,7 +24,7 @@ int _tmain(int argc, _TCHAR* argv[]) {
 
 	bool result = false;
 	int i = 0;
-	while (!result && i < 5)
+	while (!result && i < SIZE)
 		result = shooters[i++]->Shoot();
 
 	if (result)
@@ -32,5 +33,9 @@ int _tmain(int argc, _TCHAR* argv[]) {
 		std::cout << "Nobody hit the target\n";
 
 	system("pause");
+
+	for (int i = 0; i < SIZE; ++i) {
+		delete shooters[i];
+	}
 	return 0;
 }
