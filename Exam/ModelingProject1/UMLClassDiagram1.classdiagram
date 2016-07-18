@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="5abf6a84-12a7-4bef-9085-d7d7b2f83f32" name="UMLClassDiagram1" linkedPackageId="326d871f-1d9c-4f38-a194-7186912a09f5" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="f2a9479d-d4f4-4611-9cb1-d880e71a35e5">
+      <profileInstance Id="30cafd51-f02f-4d50-9f6e-a2bf27d9e3d7" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="697899ff-d88d-419e-a03b-56705ec67ad6">
+      <profileInstance Id="df9aeb4d-e253-4ac7-adc8-2da76952f8e9" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="7c00e1aa-46fd-4fa8-bbfc-d8e14229791d" name="Transport" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="393331fc-37e7-4ec1-af45-66ffa2494074" />
+        <targetEnds>
+          <association Id="bf6ae9a1-03df-4874-a965-c5562eec7af2" isDerived="false" sourceEndRoleName="Transport" targetEndRoleName="Record" isLeaf="false" isAbstract="false">
+            <classMoniker Id="48520f06-b074-447c-bb03-9f609463054f" LastKnownName="Record" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f7223b13-bccf-45b6-b2d4-2b9227f19d6f" name="Transport" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="7c8d7955-438a-4006-9e23-78484bcbe8be" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c49042ef-e7b8-46a1-b89c-e821d506311f" name="Record" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
+                  <elementDefinition Id="d693ba09-ab77-4121-b2f0-e8e049a0f558" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="931f6e6f-d8a8-4f49-a573-ffa5f9b805f7" />
+          </association>
+        </targetEnds>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="85bf4d05-10c0-4da0-b46e-004ed0f05fa8" name="Plane" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="8d4f969f-443a-4566-9cf6-1f5276255225" />
+        <generalsInternal>
+          <generalization Id="4c8d3647-f00d-4033-90c5-32f0be4f087a" isSubstitutable="false">
+            <classMoniker Id="7c00e1aa-46fd-4fa8-bbfc-d8e14229791d" LastKnownName="Transport" />
+            <elementDefinition Id="897aba9e-fdac-4672-88e9-6987e7733eae" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="aeff7d5f-9b1b-4f1d-b515-a2e2d41d1978" name="Train" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="df7a7126-d7fb-451d-afcd-a94d191a2953" />
+        <generalsInternal>
+          <generalization Id="aaf2f92a-1752-4ebf-b06b-f22be14f6517" isSubstitutable="false">
+            <classMoniker Id="7c00e1aa-46fd-4fa8-bbfc-d8e14229791d" LastKnownName="Transport" />
+            <elementDefinition Id="5ff52b13-1a63-45cf-aad9-5045baace618" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="48520f06-b074-447c-bb03-9f609463054f" name="Record" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="0be1c39f-7a1b-40d3-b070-3c59b76b169e" />
+        <suppliersInternal>
+          <dependency Id="89080923-8f3e-467c-84a6-427592f221ae">
+            <classMoniker Id="a4c39b91-7db5-43f9-9417-c2e263e97d53" LastKnownName="Time" />
+            <elementDefinition Id="5e01222b-d3e6-4730-b7ee-41fd9919da58" />
+          </dependency>
+          <dependency Id="e8a32d60-0d3b-468d-9151-cda2e63d0094">
+            <enumerationMoniker Id="2964174f-49a8-4cda-86b3-31a5da798f2a" LastKnownName="WorkingDays" />
+            <elementDefinition Id="10fc6614-2ab8-43ad-9195-9366a2e8364b" />
+          </dependency>
+        </suppliersInternal>
+        <targetEnds>
+          <association Id="315f3a71-31da-420b-b010-0b41ee871110" isDerived="false" sourceEndRoleName="Record" targetEndRoleName="Timetable" isLeaf="false" isAbstract="false">
+            <classMoniker Id="314128ab-857e-49da-b1d5-89fa326b494f" LastKnownName="Timetable" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="feb494b9-afd5-4f1b-ac32-f3a15fb32b74" name="Record" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString Id="0b4740b2-c82b-44ed-a11f-da3bcbc61038" name="Lower" value="*">
+                      <elementDefinition Id="93598b38-e40f-4347-b931-7edaac378a60" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="3907d771-37c2-4649-94eb-1f5ceae0231b" name="Upper" value="*">
+                      <elementDefinition Id="f72bf05f-1749-4610-86be-27d6930b8166" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="4e35cc6c-27f6-4d32-8fd0-879c291352a6" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f8e7625a-edfe-45fe-be08-e130f2175302" name="Timetable" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
+                  <elementDefinition Id="269c9f94-1bd2-4377-ab3b-98661adbbb08" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="9b4c3cc1-2b12-4500-955d-d6761cbd80c9" />
+          </association>
+        </targetEnds>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="314128ab-857e-49da-b1d5-89fa326b494f" name="Timetable" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="bd66861d-2bd6-4cc5-b9da-ad6222154533" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="a4c39b91-7db5-43f9-9417-c2e263e97d53" name="Time" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="d6112984-acb3-4fbd-a001-e4bde337798d" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <enumeration Id="2964174f-49a8-4cda-86b3-31a5da798f2a" name="WorkingDays" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="cb2ef720-2832-43aa-bebe-59574c96386b" />
+      </enumeration>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="326d871f-1d9c-4f38-a194-7186912a09f5" name="ModelingProject1">
+    <elementDefinition Id="73573715-6660-4611-8e8a-16a228c4246a" />
+  </package>
+</logicalClassDesignerModel>
